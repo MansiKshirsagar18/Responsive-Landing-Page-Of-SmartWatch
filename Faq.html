@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwatch FAQ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .answer {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .answer.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smartwatch FAQ</h1>
+    </header>
+    <section>
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">How do I charge my smartwatch?</div>
+            <div class="answer">To charge your smartwatch, use the provided charging cable and connect it to a power source or a USB port on your computer.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">Is the smartwatch water-resistant?</div>
+            <div class="answer">Yes, the smartwatch is water-resistant. It is designed to withstand everyday activities like hand washing and rain. However, it is not suitable for swimming or submersion in water.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">Can I change the watch band?</div>
+            <div class="answer">Yes, the smartwatch allows you to change the watch band. It is designed with interchangeable bands, giving you the flexibility to customize the look of your device.</div>
+        </div>
+    </section>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
